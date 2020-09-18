@@ -1,12 +1,27 @@
-import React from 'react';
-import StoreContext from './context/StoreContext';
-import Todolist from './components/Todolist';
+import React from "react";
+import Accordion from "./components/Accordion";
+
+const items = [
+  {
+    title: "What is React?",
+    content: "React is a front end javascript framework",
+  },
+  {
+    title: "Why use React?",
+    content: "React is a favotite JS library among engineers",
+  },
+  {
+    title: "How do you use React",
+    content: "You use React bt creating components",
+  },
+];
 
 function App() {
   return (
-    <StoreContext>
-      <Todolist/>
-    </StoreContext>
+    <div>
+      <h1>Test</h1>
+      <Accordion items={items} />
+    </div>
   );
 }
 
