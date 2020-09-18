@@ -1,26 +1,10 @@
 import React from "react";
-import Accordion from "./components/Accordion";
-
-const items = [
-  {
-    title: "What is React?",
-    content: "React is a front end javascript framework",
-  },
-  {
-    title: "Why use React?",
-    content: "React is a favotite JS library among engineers",
-  },
-  {
-    title: "How do you use React",
-    content: "You use React bt creating components",
-  },
-];
+import Todolist from "./components/Todolist";
 
 function App() {
   return (
     <div>
-      <h1>Test</h1>
-      <Accordion items={items} />
+      <Todolist />
     </div>
   );
 }
