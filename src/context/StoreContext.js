@@ -1,22 +1,24 @@
-import React from 'react'
+import React from "react";
 
 export const Mycontext = React.createContext();
 
 const stores = [
-    {
-        day: 'Monday',
-        todo: 'Meeting on 7:00 am'
-    },
-    {
-        day: 'Tuesday',
-        todo: 'Finish issue and start new project'
-    }
-]
+  {
+    day: "Monday",
+    list: "Test all issue",
+  },
+  {
+    day: "Tuesday",
+    list: "Run automate test",
+  },
+  {
+    day: "Wednesday",
+    list: "Learn React Hooks & Context",
+  },
+];
 
 export default function StoreContext(props) {
-    return (
-        <Mycontext.Provider value={[stores]}>
-            {props.children}
-        </Mycontext.Provider>
-    )
+  return (
+    <Mycontext.Provider value={[stores]}>{props.children}</Mycontext.Provider>
+  );
 }

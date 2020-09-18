@@ -1,10 +1,16 @@
-import React from 'react'
-// import { Mycontext } from '../context/StoreContext'
-
+import React from "react";
+import { Mycontext } from "../context/StoreContext";
 
 export default function Todolist() {
-    
-    return (
-        <div></div>
-    );
+  const [stores] = React.useContext(Mycontext);
+  return (
+    <div>
+      {stores.map((store, index) => (
+        <ul key={index}>
+          {store.day}
+          <li>{store.list}</li>
+        </ul>
+      ))}
+    </div>
+  );
 }
