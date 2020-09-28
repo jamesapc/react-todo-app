@@ -1,19 +1,16 @@
 import React from "react";
-import { Mycontext } from "../context/StoreContext";
-import "../style.css";
+import Todo from "./Todo.js";
+import { StoreContext } from "../context";
 
 export default function Todolist() {
-  const [stores] = React.useContext(Mycontext);
+  const { todos } = React.useContext(StoreContext);
   return (
     <div>
-      <div className="todo-container">
-        {stores.map((store, index) => (
-          <ul key={index}>
-            {store.day}
-            <li>{store.list}</li>
-          </ul>
-        ))}
-      </div>
+      <ul>
+        {todos.map((todo) => {
+          return <Todo todo={todo} key={todo.id} />;
+        })}
+      </ul>
     </div>
   );
 }
