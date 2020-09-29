@@ -7,9 +7,13 @@ import TodoForm from "./TodoForm";
 function App() {
   return (
     <StoreContextProvider>
-      <div>
-        <TodoList />
-        <TodoForm />
+      <div className="container">
+        <div className="app-wrapper">
+          <div className="main">
+            <TodoList />
+            <TodoForm />
+          </div>
+        </div>
       </div>
     </StoreContextProvider>
   );

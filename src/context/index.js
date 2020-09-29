@@ -17,8 +17,12 @@ export default function StoreContextProvider(props) {
   function clearTodo() {
     setTodos([]);
   }
+
+  function removeTodo(id) {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
   return (
-    <StoreContext.Provider value={{ todos, addTodo, clearTodo }}>
+    <StoreContext.Provider value={{ todos, addTodo, clearTodo, removeTodo }}>
       {props.children}
     </StoreContext.Provider>
   );

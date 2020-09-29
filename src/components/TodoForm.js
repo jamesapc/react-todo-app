@@ -20,12 +20,17 @@ export default function TodoForm() {
         onChange={handleChange}
         type="text"
         className="todo-input"
+        placeholder="Add Todo"
       />
-      <div>
+      <div className="buttons">
         <button type="submit" className="btn btn-primary btn-sm">
           Submit
         </button>
-        <button onClick={clearTodo} className="clear-button">
+        <button
+          type="reset"
+          onClick={() => clearTodo(setTitle(""))}
+          className="btn btn-danger btn-sm clear-button"
+        >
           Clear
         </button>
       </div>

@@ -1,26 +1,56 @@
-body {
-  padding: 0;
-  margin: 0;
-}
-
 ul {
   list-style-type: none;
+}
+
+button {
+  border: none;
+  outline: none;
 }
 
 .btn {
   margin: 10px;
 }
-
-.delete-btn {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
+.container {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
 }
 
-.list-item {
+.app-wrapper {
+  background-color: #292f38;
+  width: 25%;
+  min-width: 450px;
+  height: 600px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  margin-top: 10%;
+}
+
+.delete-btn {
+  color: aliceblue;
+  background-color: transparent;
+}
+
+.todo-item {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
-  padding-bottom: 5px;
+  color: aliceblue;
+  margin: 20px 50px 0 0;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0 0 0;
+}
+
+.todo-input {
+  width: 350px;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
 }
