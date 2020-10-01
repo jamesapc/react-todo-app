@@ -4,9 +4,11 @@ import uuid from "uuid";
 export const StoreContext = React.createContext();
 
 export default function StoreContextProvider(props) {
+  // get data from Browser
   const initialState = JSON.parse(localStorage.getItem('todos')) || [] 
   const [todos, setTodos] = React.useState(initialState);
 
+  // send data keep on browser
   React.useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos))
   }, [todos])
